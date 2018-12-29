@@ -1,0 +1,1 @@
+db.zipcodes.aggregate([ {$match:{city:"ATLANTA"}}, {$group:{_id:"$city",myCount:{$sum:1}}} ] )

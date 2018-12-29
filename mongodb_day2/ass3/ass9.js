@@ -1,0 +1,1 @@
+db.addresses.find({grades : { $elemMatch:{"score":{$gt : 80,$lt : 100 }}}});
