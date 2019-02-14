@@ -1,0 +1,35 @@
+
+Filter By:<input type="text", [(ngModel)]="name">
+<p>The name is {{name}}</p>
+<div class="col-md-10 text-center">
+<table class="table table-stripped">
+<thead class="thead-inverse">
+<tr>
+<td>EmpId</td>
+<td>Name</td>
+<td>Email</td>
+<td>Phone</td>
+<td>Salary</td>
+<td>Appraisal Rating</td>
+</tr>
+</thead>
+<tbody>
+<tr *ngIf="employees.length==0">
+<td colspan="7">
+No Records Found
+</td>
+</tr>
+<tr *ngFor="let emp of employees"> 
+<td>{{emp.empId}}</td>
+<td>{{emp.name|uppercase}}</td>
+<td>{{emp.email}}</td>
+<td>{{emp.phone}}</td>
+<td>{{emp.salary|currency:'INR':true:'1.2-2'}}</td>
+<td>{{emp.appraisalRating|number}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+ 
