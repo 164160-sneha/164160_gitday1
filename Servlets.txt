@@ -1,0 +1,94 @@
+Servlets
+------------------
+INTRODUCTION TO SERVLET REQUEST AND SERVLET RESPONSE
+----------------------------------------------------
+
+
+The important and most commonly used functionality of ServletRequest are –
+
+get the parameter from the user (front end)
+store and get the objects in request scope
+read the headers
+get session object
+
+
+
+Similarly for ServletResonse is used to-
+
+Write the response back to user
+Set or update the header values
+Redirect to another url.
+
+
+
+SERVLET REQUEST /  RESPONSE PACKAGES
+=----------------------------------------
+
+javax.servlet – This package contains ServletRequest and ServletResponse interfaces (protocol less).
+javax.servlet.http- This package contains HttpServletRequest, HttpServletResponse and HttpSession classes As package name suggest , this package contains all classes and interfaces related to HTTP protocol.
+
+
+ServletRequest METHODS-
+---------------------------------------
+
+String getParameter(String parameterName)- 
+this method is used to get the value of request parameter by name. Request parameters are the parameters sent by the user either as a query parameter or in the html form. Remember its return type is String.
+http://localhost:8080?param=hello then we can get the parameter in the servlet like request.getParameter(“param”) and this call will return  “hello”
+
+
+String[] getParameterValues(String parameterName)- 
+this method is similar to getParameter()  with the difference is that it  returns an array of String  containing all of the values the given request parameter.
+You might be wondering how we can have a multiple parameters with same name- so think of the scenarios where the check box has been used (user can select multiple options) OR a multi select dropdown.
+
+
+
+Object getAttribute(String attributeName) – 
+this method is used to get the attribute stored in a request scope by attribute name. Remember the return type is Object.
+
+
+void setAttribute(String attributeName, Object value)- 
+ this method is used to store an attribute in request scope. This method takes two arguments- one is attribute name and another is value.
+
+
+
+As getAttribute() returns Object which means setAttribute() takes Object as well.
+
+
+ServletContext getServletContext() –
+ this method can be used to get the servlet context. The ServletContext contains information about the web application and is available in all servlets.
+
+ServletResponse METHODS
+-----------------------------------------------
+
+PrintWriter getWriter() returns a PrintWriter object that can send the character text to the client.
+
+void setContentType(String type) sets the content type of the response being sent to the client before sending the respond
+
+ServletRequest and ServletResponse are the argument of service() method of GenericServlet
+
+
+HttpServletRequest
+---------------------------
+HttpServletRequest is the Http protocol based request and extends ServletRequest Interface
+
+
+Cookies getCookies()- this methods returns an array containing all of the Cookie objects the client sent with this request.
+
+String getQueryString() this methods returns the query string that is contained in the request URL.
+
+
+String getMethod()- this methods returns the name of the HTTP method with which this request was made, for example, GET, POST, or PUT. Do you remember we discussed different Request types in earlier chapter?  Based on this method
+
+HttpSession getSession() this methods returns the current HttpSession associated with this request
+
+There is an overloaded method also available which takes a Boolean argument. if value of that argument is passed as true then it will return a current session and if there is no current session returns a new session. In case value is being passed as false then it returns null if session does not exist.
+
+String getHeader(String headerName) – this method is used to get the any of header value based on given header name
+
+void addCookie(Cookie cookie)- this methods  adds the cookie object to the response.
+
+void sendRedirect(String url)  this method redirects the browser to a specified URL from your servlet. We will discuss more about this method in later chapters.
+
+
+ HttpSession 
+----------------------------
