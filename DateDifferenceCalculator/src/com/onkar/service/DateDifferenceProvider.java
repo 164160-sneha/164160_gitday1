@@ -1,9 +1,8 @@
 package com.onkar.service;
 
-import com.onkar.servicesupp.MyDate;
+import com.onkar.service.supp.MyDate;
 
 public class DateDifferenceProvider {
-
 	static final int JAN = 31;
 	static final int FEB = 28;
 	static final int MAR = 31;
@@ -20,19 +19,14 @@ public class DateDifferenceProvider {
 	int[] months = { JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC };
 
 	public int getDateDifference(MyDate startDate, MyDate endDate) {
-		if (sameDate(startDate, endDate) && sameMonth(startDate, endDate)
-				&& sameYear(startDate, endDate)) {
+		if (sameDate(startDate, endDate) && sameMonth(startDate, endDate) && sameYear(startDate, endDate)) {
 			return 0;
-		} else if (sameMonth(startDate, endDate)
-				&& sameYear(startDate, endDate)) {
+		} else if (sameMonth(startDate, endDate) && sameYear(startDate, endDate)) {
 			return endDate.getDd() - startDate.getDd();
 		} else if (sameYear(startDate, endDate)) {
-			return remainingDaysOfMonth(startDate)
-					+ daysInIntervingMonth(startDate, endDate)
-					+ endDate.getDd();
+			return remainingDaysOfMonth(startDate) + daysInIntervingMonth(startDate, endDate) + endDate.getDd();
 		} else {
-			return remainingDaysOfMonth(startDate)
-					+ remainingDaysInYear(startDate) + leadingYear(endDate)
+			return remainingDaysOfMonth(startDate) + remainingDaysInYear(startDate) + leadingYear(endDate)
 					+ daysInInterveningYear(startDate, endDate);
 		}
 
@@ -51,25 +45,13 @@ public class DateDifferenceProvider {
 	}
 
 	private int remainingDaysOfMonth(MyDate date) {
-		int remainingDays;
-		if (date.getMm() == 2) {
-			 remainingDays = months[date.getMm() - 1] - date.getDd() + 1;
-		}
-		else 
-			 remainingDays = months[date.getMm() - 1] - date.getDd();
-		return remainingDays;
+		return months[date.getMm() - 1] - date.getDd();
 	}
 
 	private int daysInIntervingMonth(MyDate startDate, MyDate endDate) {
 		int totalDays = 0;
 		for (int index = startDate.getMm() + 1; index < endDate.getMm(); index++) {
-			if ((endDate.getYyyy() % 4) == 0 || (endDate.getYyyy() % 400) == 0) {
-				if (index == 2) {
-					totalDays += 29;
-				} else
-					totalDays += months[index - 1];
-			} else
-				totalDays += months[index - 1];
+			totalDays += months[index - 1];
 		}
 		return totalDays;
 
@@ -81,14 +63,7 @@ public class DateDifferenceProvider {
 
 		for (int year = startDate.getYyyy() + 1; year < endDate.getYyyy(); year++) {
 
-			if ((year % 4) != 0)
-				remainingdays = remainingdays + 365;
-			else if ((year % 100) != 0)
-				remainingdays = remainingdays + 366;
-			else if ((year % 400) != 0)
-				remainingdays = remainingdays + 365;
-			else
-				remainingdays = remainingdays + 366;
+			remainingdays = remainingdays + 28;
 		}
 
 		return remainingdays;
@@ -109,26 +84,13 @@ public class DateDifferenceProvider {
 	private int leadingYear(MyDate endDate) {
 
 		int daysRemaining = 0;
-		
-		for(int month = 1; month < endDate.getMm(); month++){
-			if ((endDate.getYyyy() % 4) == 0 || (endDate.getYyyy() % 400) == 0) {
-			if(month==2){
-				daysRemaining = daysRemaining + 29;
-			}
-			else
-				daysRemaining = daysRemaining + months[month - 1];	
+
+		for (int month = 1; month < endDate.getMm(); month++) {
+			daysRemaining = daysRemaining + months[month - 1];
 		}
-			else
-				daysRemaining = daysRemaining + months[month - 1];		
-		}
+
 		daysRemaining = daysRemaining + endDate.getDd();
 		return daysRemaining;
 	}
+
 }
-
-
-
-	
-
-
-
