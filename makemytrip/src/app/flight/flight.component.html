@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Flight List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>flightId</th>
+        <th>flightName</th>
+        <th>source</th>
+        <th>destination</th>
+        <th>arrival</th>
+        <th>departure</th>
+        <th>cost</th>
+        <th>capacity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{ flight.flightId }}</td>
+        <td>{{ flight.flightName }}</td>
+        <td>{{ flight.source }}</td>
+        <td>{{ flight.destination }}</td>
+        <td>{{ flight.arrival }}</td>
+        <td>{{ flight.departure }}</td>
+        <td>{{ flight.cost }}</td>
+        <td>{{ flight.capacity }}</td>
+        
+        <td>Show Detail</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
