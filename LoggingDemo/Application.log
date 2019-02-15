@@ -1,0 +1,23 @@
+2019-01-18 15:57:02.705  INFO 7276 --- [main] c.s.springboot.LoggingDemoApplication    : Starting LoggingDemoApplication on DIN8004107 with PID 7276 (started by smahale in D:\spring codes\LoggingDemo)
+2019-01-18 15:57:02.708  INFO 7276 --- [main] c.s.springboot.LoggingDemoApplication    : No active profile set, falling back to default profiles: default
+2019-01-18 15:57:03.736  INFO 7276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5020 (http)
+2019-01-18 15:57:03.760  INFO 7276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-18 15:57:03.760  INFO 7276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-01-18 15:57:03.769  INFO 7276 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs\;;C:\Users\smahale\AppData\Roaming\npm;C:\Users\smahale\AppData\Local\Programs\Microsoft VS Code\bin;D:\sts-bundle\sts-3.9.6.RELEASE;;.]
+2019-01-18 15:57:03.862  INFO 7276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-18 15:57:03.862  INFO 7276 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1095 ms
+2019-01-18 15:57:04.060  INFO 7276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-18 15:57:04.230  INFO 7276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5020 (http) with context path ''
+2019-01-18 15:57:04.232  INFO 7276 --- [main] c.s.springboot.LoggingDemoApplication    : Started LoggingDemoApplication in 1.852 seconds (JVM running for 2.321)
+"2019-01-18 01:06:15 [main] INFO  c.s.s.LoggingDemoApplication - Starting LoggingDemoApplication on DIN8004107 with PID 8848 (started by smahale in D:\spring codes\LoggingDemo)
+""2019-01-18 01:06:15 [main] INFO  c.s.s.LoggingDemoApplication - No active profile set, falling back to default profiles: default
+""2019-01-18 01:06:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5021 (http)
+""2019-01-18 01:06:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2019-01-18 01:06:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.14]
+""2019-01-18 01:06:16 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs\;;C:\Users\smahale\AppData\Roaming\npm;C:\Users\smahale\AppData\Local\Programs\Microsoft VS Code\bin;D:\sts-bundle\sts-3.9.6.RELEASE;;.]
+""2019-01-18 01:06:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2019-01-18 01:06:16 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1058 ms
+""2019-01-18 01:06:16 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+""2019-01-18 01:06:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 5021 (http) with context path ''
+""2019-01-18 01:06:16 [main] INFO  c.s.s.LoggingDemoApplication - Started LoggingDemoApplication in 1.782 seconds (JVM running for 2.245)
+"
